@@ -1,9 +1,9 @@
 from typing import Literal, TypedDict
 
-from langchain_community.llms import Ollama
 from langchain_community.tools import DuckDuckGoSearchRun
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import PromptTemplate
+from langchain_ollama import OllamaLLM
 from langgraph.graph import END, StateGraph
 
 
@@ -15,9 +15,9 @@ class GraphState(TypedDict):
 
 
 class Decision_Graph_Agent:
-	def __init__(self, searcher, model_name="llama3"):
+	def __init__(self, searcher, model_name="llama3.2"):
 		self.searcher = searcher
-		self.llm = Ollama(model=model_name)
+		self.llm = OllamaLLM(model=model_name)
 		self.web_search_tool = DuckDuckGoSearchRun()
 
 		self.grader_prompt = PromptTemplate(

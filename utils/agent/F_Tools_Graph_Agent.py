@@ -15,7 +15,7 @@ class AgentState(TypedDict):
 
 
 class Tools_Graph_Agent:
-	def __init__(self, searcher, model_name="llama3"):
+	def __init__(self, searcher, model_name="llama3.2"):
 		self.searcher = searcher
 
 		@tool
