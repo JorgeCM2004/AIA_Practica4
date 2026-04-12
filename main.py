@@ -1,5 +1,5 @@
 from utils import Data_Downloader, Hybrid_Searcher, Knowledge_Builder
-from utils.agent import Linear_Graph_Agent
+from utils.agent import Tools_Graph_Agent
 
 
 def main():
@@ -11,7 +11,7 @@ def main():
 
 	searcher = Hybrid_Searcher()
 
-	rag_system = Linear_Graph_Agent(searcher=searcher, model_name="llama3")
+	rag_system = Tools_Graph_Agent(searcher=searcher, model_name="llama3.2")
 
 	query = input("Question: ")
 
