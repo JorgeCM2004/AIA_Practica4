@@ -13,3 +13,6 @@ wheels/
 data/
 chroma_db/
 images/
+
+#Memoria
+memoria/
